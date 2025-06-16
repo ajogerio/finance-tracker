@@ -1,11 +1,24 @@
 import NavigationBar from "./components/NavigationBar";
 import Header from "./components/Header";
+import { Outlet } from "react-router-dom";
+import type { ReactNode } from "react";
 
-export default function MainLayout({ children }: Props) {
+type LayoutProps = {
+  children?: ReactNode;
+};
+
+export default function MainLayout({ children }: LayoutProps) {
   return (
-    <main className="flex">
+    <div className="flex min-h-screen w-full">
       <NavigationBar />
-      <Header />
-    </main>
+
+      {/* Header and page content container */}
+      <div className="flex flex-col w-full min-h-screen">
+        <Header />
+
+        {/* Main page content  */}
+        <main>{children || <Outlet />}</main>
+      </div>
+    </div>
   );
 }
