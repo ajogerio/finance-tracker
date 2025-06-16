@@ -17,7 +17,7 @@ export default function MainLayout({ children }: LayoutProps) {
         <Header />
 
         {/* Main page content  */}
-        <main className="bg-gray-300 w-full min-h-full">
+        <main className="bg-gray-300 w-full flex-1">
           {children || <Outlet />}
         </main>
       </div>

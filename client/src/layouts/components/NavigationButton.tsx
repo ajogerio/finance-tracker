@@ -4,7 +4,7 @@ type NavigationButtonProps = {
 
 export default function NavigationButton({ label }: NavigationButtonProps) {
   return (
-    <button className="flex justify-center items-center gap-1">
+    <button className="flex items-center gap-4 w-full text-left">
       <i className="fa-regular fa-compass"></i>
       <p className="text-xs">{label}</p>
     </button>
