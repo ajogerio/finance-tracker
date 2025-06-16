@@ -1,5 +1,3 @@
 export default function Header() {
-  return (
-    <div>Header</div>
-  )
+  return <header className="bg-gray-100">Header</header>;
 }
